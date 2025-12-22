@@ -144,5 +144,11 @@ module.exports = {
   findTenantBySubdomain,
   updateTenant,
   listTenants,
-  getTenantStats
+  getTenantStats,
+  // Delete tenant by ID (cascades to related entities via FK constraints)
+  deleteTenant: async (id) => {
+    const sql = 'DELETE FROM tenants WHERE id = $1';
+    const result = await query(sql, [id]);
+    return result.rowCount > 0;
+  }
 };
