@@ -267,29 +267,50 @@ Full ERD available in [docs/architecture.md](docs/architecture.md)
 ## 🐳 Docker Commands
 
 ```bash
-# Start all services
+# Start all services in detached mode
 docker-compose up -d
 
-# View logs
+# Start with build (after code changes)
+docker-compose up --build -d
+
+# View logs for all services
 docker-compose logs -f
 
-# Check service status
+# View logs for specific service
+docker-compose logs -f backend
+docker-compose logs -f frontend
+docker-compose logs -f database
+
+# Check service status and health
 docker-compose ps
 
-# Stop services
+# Stop all services (keeps data)
 docker-compose down
 
-# Rebuild containers
-docker-compose build
-
-# Remove everything (including volumes)
+# Stop and remove all data
 docker-compose down -v
 
-# Access backend shell
+# Rebuild containers after changes
+docker-compose build
+
+# Restart specific service
+docker-compose restart backend
+
+# Access backend container shell
 docker-compose exec backend sh
 
-# Access database
+# Access database with psql
 docker-compose exec database psql -U postgres -d saas_db
+
+# Run migrations manually (if needed)
+docker-compose exec backend npm run migrate
+
+# Run seed data manually (if needed)
+docker-compose exec backend npm run seed
+
+# Check backend health
+curl http://localhost:5000/health
+curl http://localhost:5000/api/health
 ```
 
 ## 📊 Subscription Plans
