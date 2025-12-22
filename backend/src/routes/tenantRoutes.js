@@ -17,7 +17,7 @@ router.get('/current', authenticate, tenantController.getCurrentTenant);
 router.get('/:id', authenticate, tenantController.getTenantById);
 
 // Update tenant
-router.put('/:id', authenticate, authorize('super_admin', 'admin'), tenantController.updateTenant);
+router.put('/:id', authenticate, authorize('super_admin', 'tenant_admin'), tenantController.updateTenant);
 
 // Super admin only - delete tenant
 router.delete('/:id', authenticate, authorize('super_admin'), tenantController.deleteTenant);

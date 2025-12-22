@@ -66,7 +66,7 @@ const updateTenant = async (req, res, next) => {
     const { id } = req.params;
     const updates = req.body;
 
-    // Super admin can update any tenant, admins can only update their own
+    // Super admin can update any tenant, tenant_admins can only update their own
     if (req.user.role !== 'super_admin' && req.user.tenantId !== id) {
       return res.status(403).json({
         success: false,

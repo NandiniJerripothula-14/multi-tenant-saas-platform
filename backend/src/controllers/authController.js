@@ -43,7 +43,7 @@ const register = async (req, res, next) => {
       email: adminEmail.toLowerCase(),
       passwordHash,
       fullName: adminFullName,
-      role: 'admin',
+      role: 'tenant_admin',
       isActive: true
     });
 

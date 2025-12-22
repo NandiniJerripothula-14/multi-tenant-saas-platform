@@ -28,7 +28,7 @@ const createUser = async (req, res, next) => {
         });
       }
     } else {
-      // Admin can only create users in their own tenant
+      // Tenant admin can only create users in their own tenant
       tenantId = req.user.tenantId;
     }
 
@@ -153,7 +153,7 @@ const getUserById = async (req, res, next) => {
       });
     }
 
-    if (req.user.role === 'admin' && user.tenant_id !== req.user.tenantId) {
+    if (req.user.role === 'tenant_admin' && user.tenant_id !== req.user.tenantId) {
       return res.status(403).json({
         success: false,
         message: 'Access denied'
@@ -201,7 +201,7 @@ const updateUser = async (req, res, next) => {
       });
     }
 
-    if (req.user.role === 'admin' && user.tenant_id !== req.user.tenantId) {
+    if (req.user.role === 'tenant_admin' && user.tenant_id !== req.user.tenantId) {
       return res.status(403).json({
         success: false,
         message: 'Access denied'
@@ -251,8 +251,8 @@ const deleteUser = async (req, res, next) => {
       });
     }
 
-    // Check permissions (only admins and super admins can delete)
-    if (req.user.role === 'admin' && user.tenant_id !== req.user.tenantId) {
+    // Check permissions (only tenant_admins and super admins can delete)
+    if (req.user.role === 'tenant_admin' && user.tenant_id !== req.user.tenantId) {
       return res.status(403).json({
         success: false,
         message: 'Access denied'

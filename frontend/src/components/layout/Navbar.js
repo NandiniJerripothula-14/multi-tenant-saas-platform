@@ -22,7 +22,7 @@ const Navbar = () => {
           <Link to="/dashboard" style={styles.link}>Dashboard</Link>
           <Link to="/projects" style={styles.link}>Projects</Link>
           
-          {(user?.role === 'admin' || user?.role === 'super_admin') && (
+          {(user?.role === 'tenant_admin' || user?.role === 'super_admin') && (
             <Link to="/users" style={styles.link}>Users</Link>
           )}
           
