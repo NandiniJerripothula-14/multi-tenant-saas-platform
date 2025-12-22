@@ -1,3 +1,8 @@
+/**
+ * Project Controller
+ * Handles all project-related operations including CRUD operations
+ * Implements multi-tenant data isolation
+ */
 const projectModel = require('../models/projectModel');
 const tenantModel = require('../models/tenantModel');
 const { logAudit } = require('../utils/logger');
@@ -224,3 +229,4 @@ module.exports = {
   updateProject,
   deleteProject
 };
+
