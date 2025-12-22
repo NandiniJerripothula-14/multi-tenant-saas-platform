@@ -2,6 +2,11 @@
 
 A production-ready, multi-tenant SaaS application for project and task management with complete data isolation, role-based access control, and subscription management.
 
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue)](https://www.docker.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-18+-blue)](https://reactjs.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)](https://www.postgresql.org/)
+
 ## 🚀 Features
 
 - **Multi-Tenancy**: Complete data isolation between organizations using shared database with tenant_id filtering
