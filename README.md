@@ -7,6 +7,12 @@ A production-ready, multi-tenant SaaS application for project and task managemen
 [![React](https://img.shields.io/badge/React-18+-blue)](https://reactjs.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)](https://www.postgresql.org/)
 
+
+## 🎥 Demo Video
+
+Watch the walkthrough: [Demo Video](https://drive.google.com/file/d/1b1ZM6l_P1tLVlmN1ZI7_c6x4DNnk2_fy/view?usp=sharing)
+
+
 ## 🚀 Features
 
 - **Multi-Tenancy**: Complete data isolation between organizations using shared database with tenant_id filtering
