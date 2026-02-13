@@ -115,6 +115,32 @@ curl http://localhost:5000/health
 | User 1 (Demo) | user1@demo.com | User@123 | demo |
 | User 2 (Demo) | user2@demo.com | User@123 | demo |
 
+## ☁️ Cloud Deployment
+
+For production deployment to Railway.app, Heroku, or other cloud platforms, see **[DEPLOYMENT.md](DEPLOYMENT.md)** for step-by-step instructions.
+
+### Quick Cloud Deploy (Railway.app)
+1. Push code to GitHub
+2. Visit https://railway.app and connect your repository
+3. Railway auto-provisions PostgreSQL and deploys the app
+4. Set JWT_SECRET environment variable
+5. Deploy takes ~2-3 minutes
+
+### Test API Locally
+After starting with Docker, test the API:
+
+**PowerShell:**
+```powershell
+.\test-api.ps1
+# or with custom URL: .\test-api.ps1 http://your-deployed-api.com/api
+```
+
+**Bash/Shell:**
+```bash
+./test-api.sh
+# or with custom URL: ./test-api.sh http://your-deployed-api.com/api
+```
+
 ## 📦 Project Structure
 
 ```
