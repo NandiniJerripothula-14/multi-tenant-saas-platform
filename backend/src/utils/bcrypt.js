@@ -1,5 +1,13 @@
+/**
+ * Password Hashing Utility
+ * 
+ * Provides secure password hashing and verification using bcrypt.
+ * Uses 10 salt rounds for balance between security and performance.
+ */
+
 const bcrypt = require('bcrypt');
 
+// Number of salt rounds for bcrypt hashing
 const SALT_ROUNDS = 10;
 
 // Hash password
