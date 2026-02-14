@@ -18,9 +18,7 @@ Railway.app is the easiest way to deploy this application.
    - `JWT_SECRET=your-secure-random-key-here-min-32-chars`
    - `JWT_EXPIRES_IN=24h`
    - Database variables are auto-set by Railway PostgreSQL plugin
-
 7. **Deploy!** (typically 2-3 minutes)
-
 Backend URL will be provided by Railway (e.g., `https://your-project-api.railway.app`)
 
 ---
