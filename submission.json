@@ -1,7 +1,7 @@
 {
   "deploymentInfo": {
-    "backendUrl": "https://multi-tenant-saas-backend.railway.app",
-    "frontendUrl": "https://multi-tenant-saas-frontend.railway.app",
+    "backendUrl": "https://multi-tenant-saas-platform-57ag.onrender.com",
+    "frontendUrl": "https://multi-tenant-saas-platform-1-8g1j.onrender.com",
     "deploymentPlatform": "Railway.app",
     "deploymentGuide": "See DEPLOYMENT.md for step-by-step instructions",
     "databaseProvider": "PostgreSQL (managed)",
